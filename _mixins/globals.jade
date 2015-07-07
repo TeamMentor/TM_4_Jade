@@ -23,8 +23,6 @@ mixin copyright
 mixin search-icon
   span.icon-Search(title='Search')
     span.path1
-    span.path2
-    span.path3
 
 mixin index-icon
   span.icon-Index(title='Index')
@@ -84,7 +82,7 @@ mixin net-icon
     span.path2
 
 mixin net-3-5-icon
-  span.icon-Net-3-5(title='.Net')
+  span.icon-Net-3-5(title='.Net 3.5')
     span.path1
     span.path2
 
@@ -223,6 +221,8 @@ mixin filter-icon(filter, title)
             +java-icon
           when 'PHP'
             +php-icon
+          when 'Technology Independent'
+            +all-icon
           when 'Scala Play'
           when 'Scala with Play Framework'
             +scala-icon
