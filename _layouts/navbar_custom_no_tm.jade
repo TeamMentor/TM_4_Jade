@@ -1,0 +1,7 @@
+include ../_mixins/links.jade
+
+.fixed
+    if (global.custom.custom_navigation)
+        #customer-navigation(style={background:global.custom.custom_navigation.backgroundColor, height:global.custom.custom_navigation.height})
+            #customer-logo
+                img(src=global.custom.custom_navigation.logo)
