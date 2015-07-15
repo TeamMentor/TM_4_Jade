@@ -38,17 +38,55 @@ mixin login-form
 mixin sign-up-form
   form#sign-up-form(role='form', method='POST', action='/user/sign-up')
     h4 Sign Up
-    .form-group
-      +username-input
-      include:marked ../../TM_Static/content/getting-started/username-prompt.md
-    .form-group
-      +email-input
-      include:marked ../../TM_Static/content/getting-started/email-prompt.md
-    .form-group
-      +password-input
-      include:marked ../../TM_Static/content/getting-started/password-prompt.md
-    .form-group
-      +confirm-password-input
+    .row
+      .lge-container
+        .form-group
+          +username-input
+          include:marked ../../TM_Static/content/getting-started/username-prompt.md
+    .row
+      .col-6
+        .lge-container
+          .form-group
+            +password-input
+      .col-6
+        .lge-container
+          .form-group
+            +confirm-password-input
+      .lge-container
+        include:marked ../../TM_Static/content/getting-started/password-prompt.md
+    .row
+      .lge-container
+        .form-group
+          +email-input
+          include:marked ../../TM_Static/content/getting-started/email-prompt.md
+    .row
+      .col-6
+        .lge-container
+          .form-group
+            +first-name-input
+      .col-6
+        .lge-container
+          .form-group
+            +last-name-input
+    .row
+      .col-6
+        .lge-container
+          .form-group
+            +company-input
+      .col-6
+        .lge-container
+          .form-group
+            +title-input
+    .row
+      .col-6
+        .lge-container
+          .form-group
+            +country-input
+      .col-6
+        .lge-container
+          .form-group
+            +state-input
+
     include:marked ../../TM_Static/content/getting-started/agree-to-toc.md
     .row
       .col-5
