@@ -35,12 +35,12 @@ mixin email-input
   input(type='email', id='email', name='email', placeholder='Email Address',value='#{viewModel?viewModel.email:""}',required,maxlength='256')
 
 mixin first-name-input
-  label(for='firstName') First Name
-  input(type='text', id='firstName', name='firstName', placeholder='First Name',value='#{viewModel?viewModel.firstname:""}',required,maxlength='100')
+  label(for='firstname') First Name
+  input(type='text', id='firstname', name='firstName', placeholder='First Name',value='#{viewModel?viewModel.firstname:""}',required,maxlength='100')
 
 mixin last-name-input
-  label(for='lastName') Last Name
-  input(type='text', id='lastName', name='lastName', placeholder='Last Name',value='#{viewModel?viewModel.lastname:""}',required,maxlength='100')
+  label(for='lastname') Last Name
+  input(type='text', id='lastname', name='lastname', placeholder='Last Name',value='#{viewModel?viewModel.lastname:""}',required,maxlength='100')
 
 mixin company-input
   label(for='company') Company
@@ -52,7 +52,7 @@ mixin title-input
 
 mixin country-input
   label(for='country') Country
-  input(type='text', id='country', name='country', placeholder='Country',value='#{viewModel?viewModel.country:""}',maxlength='100')
+  input(type='text', id='country', name='country', placeholder='Country',value='#{viewModel?viewModel.country:""}',required,maxlength='100')
 
 mixin state-input
   label(for='state') State
