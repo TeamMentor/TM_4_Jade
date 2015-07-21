@@ -32,7 +32,31 @@ mixin confirm-password-input
 
 mixin email-input
   label(for='email') Email Address
-  input(type='email', id='email', name='email', placeholder='Email Address',value='#{viewModel?viewModel.email:""}',maxlength='256')
+  input(type='email', id='email', name='email', placeholder='Email Address',value='#{viewModel?viewModel.email:""}',required,maxlength='256')
+
+mixin first-name-input
+  label(for='firstname') First Name
+  input(type='text', id='firstname', name='firstName', placeholder='First Name',value='#{viewModel?viewModel.firstname:""}',required,maxlength='100')
+
+mixin last-name-input
+  label(for='lastname') Last Name
+  input(type='text', id='lastname', name='lastname', placeholder='Last Name',value='#{viewModel?viewModel.lastname:""}',required,maxlength='100')
+
+mixin company-input
+  label(for='company') Company
+  input(type='text', id='company', name='company', placeholder='Company',value='#{viewModel?viewModel.company:""}',maxlength='100')
+
+mixin title-input
+  label(for='title') Job/Title
+  input(type='text', id='title', name='title', placeholder='Job/Title',value='#{viewModel?viewModel.title:""}',maxlength='100')
+
+mixin country-input
+  label(for='country') Country
+  input(type='text', id='country', name='country', placeholder='Country',value='#{viewModel?viewModel.country:""}',required,maxlength='100')
+
+mixin state-input
+  label(for='state') State
+  input(type='text', id='state', name='state', placeholder='state',value='#{viewModel?viewModel.state:""}',maxlength='100')
 
 //- Form Buttons
 mixin login-button
