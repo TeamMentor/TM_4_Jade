@@ -2,7 +2,7 @@ include ../_mixins/links.jade
 
 .fixed.landing-page
 
-    if (global.custom.custom_navigation)
+    if (global.custom && global.custom.custom_navigation)
         #customer-navigation
             #customer-logo
                 img(src=global.custom.custom_navigation.logo)
