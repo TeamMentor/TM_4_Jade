@@ -3,9 +3,14 @@ html(lang='en')
     include head
         link(href="/css/syntax-highlighting-github-style.css" rel="stylesheet")
     body
-        include navbar_home
-        if (custom_navigation)
+        if (custom_navigation && custom_navigation.NoTm)
+            include navbar_custom_no_tm
             #customer
                 block content
         else
-            block content
+            include navbar_home
+            if (custom_navigation)
+                #customer
+                    block content
+            else
+                block content
