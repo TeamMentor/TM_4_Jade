@@ -4,8 +4,6 @@ include ../_mixins/links.jade
     #team-mentor-navigation
         a(href='/user/main.html')
             #tm-logo
-        #customer-logo
-          img(src='https://tmdev01-lloyds.teammentor.net/logos/for_the_journey_logo.jpg')
         #links
             +links-navbar__home
             ul#message
@@ -15,3 +13,34 @@ include ../_mixins/links.jade
                         =  ' '
                         a#tm-support-email(href="mailto:support@securityinnovation.com") an email
                         =  '.'
+
+    //if (custom)
+        #team-mentor-navigation
+            a(href='/user/main.html')
+                #tm-logo
+            #customer-logo
+                //Img here
+            #links
+                +links-navbar__home
+                ul#message
+                    li
+                        +mail-icon
+                        span Found an issue? Send us
+                            =  ' '
+                            a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                            =  '.'
+
+    //if (custom-sony)
+        #team-mentor-navigation.sony
+            a(href='/user/main.html')
+                #tm-logo.sony-logo
+                    //Sony logo here
+            #links
+                +links-navbar__home
+                ul#message
+                    li
+                        +mail-icon
+                        span Found an issue? Send us
+                            =  ' '
+                            a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                            =  '.'
