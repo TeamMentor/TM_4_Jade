@@ -1,14 +1,11 @@
 include ../_mixins/links.jade
 
 .fixed.landing-page
-
-    if (global.custom && global.custom.custom_navigation)
-        #customer-navigation
-            #customer-logo
-                img(src=global.custom.custom_navigation.logo)
-
     #team-mentor-navigation
         a(href='/')
             #tm-logo
+        if (global.custom && global.custom.custom_navigation)
+            #customer-logo
+                img(src=global.custom.custom_navigation.logo)
         #links
             +links-navbar__landing-page

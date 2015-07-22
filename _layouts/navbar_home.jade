@@ -1,19 +1,48 @@
 include ../_mixins/links.jade
-
 .fixed
-    if (custom_navigation)
-        #customer-navigation
-            #customer-logo
-                img(src=custom_navigation.logo)
-    #team-mentor-navigation
-        a(href='/user/main.html')
-            #tm-logo
-        #links
-            +links-navbar__home
-            ul#message
-                li
-                    +mail-icon
-                    span Found an issue? Send us
-                        =  ' '
-                        a#tm-support-email(href="mailto:support@securityinnovation.com") an email
-                        =  '.'
+    //If customizations are enabled
+    if (global.custom && global.custom.custom_navigation)
+        //Hides tm logo and shows navbar
+        if(global.custom.custom_navigation.NoTm)
+            #team-mentor-navigation(class=global.custom.custom_navigation.navbarclass)
+                a(href='/user/main.html')
+                    #tm-logo(class=global.custom.custom_navigation.logoclass)
+                        img(src=global.custom.custom_navigation.logo)
+                #links
+                    +links-navbar__home
+                    ul#message
+                        li
+                            +mail-icon
+                            span Found an issue? Send us
+                                =  ' '
+                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                =  '.'
+
+        else
+            #team-mentor-navigation
+                a(href='/user/main.html')
+                    #tm-logo
+                #customer-logo
+                    img(src=global.custom.custom_navigation.logo)
+                #links
+                    +links-navbar__home
+                    ul#message
+                        li
+                            +mail-icon
+                            span Found an issue? Send us
+                                =  ' '
+                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                =  '.'
+    else
+        #team-mentor-navigation
+            a(href='/user/main.html')
+                #tm-logo
+            #links
+                +links-navbar__home
+                ul#message
+                    li
+                        +mail-icon
+                        span Found an issue? Send us
+                            =  ' '
+                            a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                            =  '.'
