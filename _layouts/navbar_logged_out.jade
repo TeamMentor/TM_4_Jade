@@ -3,7 +3,10 @@ include ../_mixins/links.jade
 .fixed.landing-page
     #team-mentor-navigation
         a(href='/')
-            #tm-logo
+            if (global.custom && global.custom.custom_navigation)
+                #tm-logo(class="customization")
+            else
+                #tm-logo
         if (global.custom && global.custom.custom_navigation)
             #customer-logo
                 img(src=global.custom.custom_navigation.logo)
