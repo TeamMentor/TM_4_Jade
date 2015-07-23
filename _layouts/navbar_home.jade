@@ -8,6 +8,9 @@ include ../_mixins/links.jade
                 a(href='/user/main.html')
                     #tm-logo(class=global.custom.custom_navigation.logoclass)
                         img(src=global.custom.custom_navigation.logo)
+
+                p(style=global.custom.custom_navigation.loggedInTextStyle)
+                    span #{global.custom.custom_navigation.loggedInText}
                 #links
                     +links-navbar__home
                     ul#message
