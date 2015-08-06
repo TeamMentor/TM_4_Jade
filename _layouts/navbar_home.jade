@@ -45,7 +45,13 @@ include ../_mixins/links.jade
                 ul#message
                     li
                         +mail-icon
-                        span Found an issue? Send us
-                            =  ' '
-                            a#tm-support-email(href="mailto:support@securityinnovation.com") an email
-                            =  '.'
+                        if internalUser
+                            span Found an issue? Open it
+                                =  ' '
+                                a#tm-support-email(href="https://github.com/TeamMentor/TM_4_0_Design/issues") here
+                                =  '.'
+                        else
+                            span Found an issue? Send us
+                                =  ' '
+                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                =  '.'
