@@ -14,7 +14,10 @@ mixin article
         .alert.alert-neutral
             span.alert-icon !
             span.alert-text Have a comment about this article?
-                a#tm-support-email(href=supportEmail)      Send our team an email.
+                if internalUser
+                    a#tm-support-email(href=githubContentUrl+"/new?title=#{title}&body=#{articleUrl}")      Open an issue here.
+                else
+                    a#tm-support-email(href=supportEmail)      Send our team an email.
 
 mixin no-article
     #article.bg.content
