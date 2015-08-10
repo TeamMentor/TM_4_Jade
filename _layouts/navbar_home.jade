@@ -18,7 +18,7 @@ include ../_mixins/links.jade
                             +mail-icon
                             span Found an issue? Send us
                                 =  ' '
-                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                a#tm-support-email(href=supportEmail) an email
                                 =  '.'
 
         else
@@ -34,7 +34,7 @@ include ../_mixins/links.jade
                             +mail-icon
                             span Found an issue? Send us
                                 =  ' '
-                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                a#tm-support-email(href=supportEmail) an email
                                 =  '.'
     else
         #team-mentor-navigation
@@ -45,7 +45,13 @@ include ../_mixins/links.jade
                 ul#message
                     li
                         +mail-icon
-                        span Found an issue? Send us
-                            =  ' '
-                            a#tm-support-email(href="mailto:support@securityinnovation.com") an email
-                            =  '.'
+                        if internalUser
+                            span Found an issue? Open it
+                                =  ' '
+                                a#tm-support-link(href=githubUrl target="_blank") here
+                                =  '.'
+                        else
+                            span Found an issue? Send us
+                                =  ' '
+                                a#tm-support-email(href=supportEmail) an email
+                                =  '.'
