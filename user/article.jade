@@ -1,14 +1,27 @@
-extends ../_layouts/page_logged_in.jade
+extends ../_layouts/page.jade
 include ../_mixins/articles-mixins.jade
 include ../shared-mixins/globals.jade
 block content
   #application
     .row
-      .col-2
-        .lge-container
-      .col-8
-        .lge-container
-          +article
-          +copyright
+      if loggedIn
+        .col-2
+          .lge-container
+        .col-8
+          .lge-container
+            +article
+            +copyright
+      else
+        .col-1
+          .lge-container
+        .col-10
+          .alert.alert-ok(role='alert')
+            #message
+              span.alert-icon !
+              if welcomeMessage
+                span.alert-text=welcomeMessage
+          .lge-container
+            +article
+            +copyright
       .col-2
         .lge-container
