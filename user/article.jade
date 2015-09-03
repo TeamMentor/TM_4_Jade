@@ -20,6 +20,12 @@ block content
               span.alert-icon !
               if welcomeMessage
                 span.alert-text=welcomeMessage
+                    = '  '
+                    a#signUp-link(href=signUpUrl) Sign up
+                    = ' to unlock the full evaluation of TEAM Mentor. Already have an account?'
+                    = '  '
+                    a#login-link(href=loginUrl) Login here
+                    = ' to remove this banner.'
           .lge-container
             +article
             +copyright
