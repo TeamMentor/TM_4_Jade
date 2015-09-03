@@ -21,7 +21,7 @@ mixin team-mentor-summary
           include:marked ../../TM_Static/content/getting-started/summary-point-3.md
 
 mixin login-form
-  form#login-form(role='form' method='post' action='/user/login')
+  form#login-form(role='form' method='post' action='/jade/user/login')
     h4 Login
     .form-group
       +username-input
@@ -32,11 +32,11 @@ mixin login-form
         .col-5
           +login-button
         .col-7
-          a#link-forgot-pwd.minor(href='/guest/pwd-forgot.html') Forgot your password?
+          a#link-forgot-pwd.minor(href='/jade/guest/pwd-forgot.html') Forgot your password?
 
 //- sign-up-form
 mixin sign-up-form
-  form#sign-up-form(role='form', method='POST', action='/user/sign-up')
+  form#sign-up-form(role='form', method='POST', action='/jade/user/sign-up')
     h4 Sign Up
     .row
       .lge-container
@@ -95,7 +95,7 @@ mixin sign-up-form
 
 //- forgot-password-form
 mixin forgot-password-form
-  form#forgot-password(role='form', action='/user/pwd_reset' method='post')
+  form#forgot-password(role='form', action='/jade/user/pwd_reset' method='post')
     h4 Retrieve your password
     .form-group
       +email-input
@@ -104,7 +104,7 @@ mixin forgot-password-form
         +get-password-button
 
 //- pwd-reset-form
-mixin pwd-reset-form
+//mixin pwd-reset-form
   form#pwd-reset-form(role='form' method='post')
     h4 Reset your password
     .form-group
