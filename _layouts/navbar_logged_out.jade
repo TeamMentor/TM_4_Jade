@@ -5,7 +5,7 @@ include ../_mixins/links.jade
         //Hides tm logo and shows navbar
         if(global.custom.custom_navigation.NoTm)
             #team-mentor-navigation(class=global.custom.custom_navigation.navbarclass)
-                a(href='/user/main.html')
+                a(href='/jade/user/main.html')
                     #tm-logo(class=global.custom.custom_navigation.logoclass)
                         img(src=global.custom.custom_navigation.logo)
 
@@ -24,7 +24,7 @@ include ../_mixins/links.jade
                     +links-navbar__landing-page
     else
         #team-mentor-navigation
-            a(href='/user/main.html')
+            a(href='/jade/user/main.html')
                 #tm-logo
             #links
                 +links-navbar__landing-page
