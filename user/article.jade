@@ -1,14 +1,33 @@
-extends ../_layouts/page_logged_in.jade
+extends ../_layouts/page.jade
 include ../_mixins/articles-mixins.jade
 include ../shared-mixins/globals.jade
 block content
   #application
     .row
-      .col-2
-        .lge-container
-      .col-8
-        .lge-container
-          +article
-          +copyright
+      if loggedIn
+        .col-2
+          .lge-container
+        .col-8
+          .lge-container
+            +article
+            +copyright
+      else
+        .col-1
+          .lge-container
+        .col-10
+          .alert.alert-ok(role='alert')
+            #message
+              span.alert-icon !
+              if welcomeMessage
+                span.alert-text=welcomeMessage
+                    = '  '
+                    a#signUp-link(href=signUpUrl) Sign up
+                    = ' to unlock the full evaluation of TEAM Mentor. Already have an account?'
+                    = '  '
+                    a#login-link(href=loginUrl) Login here
+                    = ' to remove this banner.'
+          .lge-container
+            +article
+            +copyright
       .col-2
         .lge-container
