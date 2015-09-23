@@ -19,17 +19,17 @@ mixin reasons-div
                         table
                             tr
                                 td
-                                    .fix-vulnerabilities
+                                    img(src='/assets/icons/ie/fix-vulnerabilities.png')
                                 td
                                     include:marked ../../TM_Static/content/landing-pages/selling-point-1.md
                             tr
                                 td
-                                    .reduce-vulnerabilities
+                                    img(src='/assets/icons/ie/reduce-vulnerabilities.png')
                                 td
                                     include:marked ../../TM_Static/content/landing-pages/selling-point-2.md
                             tr
                                 td
-                                    .improve-process
+                                    img(src='/assets/icons/ie/expand-knowledge.png')
                                 td
                                     include:marked ../../TM_Static/content/landing-pages/selling-point-3.md
 
@@ -38,16 +38,7 @@ mixin clients-div
         .lge-container
             include:marked ../../TM_Static/content/landing-pages/clients-div-heading.md
             .row
-                .col-offset-1.col-2
-                    #client-logo.elsevier
-                .col-2
-                    #client-logo.fedex
-                .col-2
-                    #client-logo.mass-mutual
-                .col-2
-                    #client-logo.microsoft
-                .col-2
-                    #client-logo.ubs
+                img(src='/assets/clients/flare-logos.jpg')
 
 mixin about-div
     #about
@@ -72,22 +63,22 @@ mixin features-div
                     table
                         tr
                             td
-                                .delivers-compliance
+                                img(src='/assets/icons/ie/delivers-compliance.png')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-1.md
                         tr
                             td
-                                .integrates
+                                img(src='/assets/icons/ie/integrates.png')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-2.md
                         tr
                             td
-                                .cross-references
+                                img(src='/assets/icons/ie/cross-references.png')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-3.md
                         tr
                             td
-                                .provides-guidance
+                                img(src='/assets/icons/ie/provides-guidance.png')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-4.md
 
@@ -118,9 +109,12 @@ mixin footer-div
                     li
                         a#tm-support-email(href=supportEmail title='Email')
                             +mail-icon
+                            span.text Email
                     li
                         a#tm-twitter(href='http://www.twitter.com/SecInnovation' target='_blank' title='Twitter')
                             +twitter-icon
+                            span.text Twitter
                     li
                         a#terms-and-conditions(href='../misc/terms-and-conditions' title ='Terms and Conditions')
                             +paperclip-icon
+                            span.text Terms
