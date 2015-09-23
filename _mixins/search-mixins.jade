@@ -32,7 +32,9 @@ mixin search-bar-input
                             .input-group
                                 input.form-control(type='text', id='search-input', name='text')
                                 button#search-button(type='submit')
-                                    +search-icon
+                                    span.icon
+                                        +search-icon
+                                    span.text Search
 
 mixin search-2
     #search-div-2
