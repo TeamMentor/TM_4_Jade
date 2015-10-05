@@ -19,17 +19,17 @@ mixin reasons-div
                         table
                             tr
                                 td
-                                    .fix-vulnerabilities
+                                    img(src='/assets/icons/ie/fix-vulnerabilities.jpg')
                                 td
                                     include:marked ../../TM_Static/content/landing-pages/selling-point-1.md
                             tr
                                 td
-                                    .reduce-vulnerabilities
+                                    img(src='/assets/icons/ie/reduce-vulnerabilities.jpg')
                                 td
                                     include:marked ../../TM_Static/content/landing-pages/selling-point-2.md
                             tr
                                 td
-                                    .improve-process
+                                    img(src='/assets/icons/ie/expand-knowledge.jpg')
                                 td
                                     include:marked ../../TM_Static/content/landing-pages/selling-point-3.md
 
@@ -38,16 +38,7 @@ mixin clients-div
         .lge-container
             include:marked ../../TM_Static/content/landing-pages/clients-div-heading.md
             .row
-                .col-offset-1.col-2
-                    #client-logo.elsevier
-                .col-2
-                    #client-logo.fedex
-                .col-2
-                    #client-logo.mass-mutual
-                .col-2
-                    #client-logo.microsoft
-                .col-2
-                    #client-logo.ubs
+                img(src='/assets/clients/flare-logos.jpg')
 
 mixin about-div
     #about
@@ -72,22 +63,22 @@ mixin features-div
                     table
                         tr
                             td
-                                .delivers-compliance
+                                img(src='/assets/icons/ie/delivers-compliance.jpg')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-1.md
                         tr
                             td
-                                .integrates
+                                img(src='/assets/icons/ie/integrates.jpg')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-2.md
                         tr
                             td
-                                .cross-references
+                                img(src='/assets/icons/ie/cross-references.jpg')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-3.md
                         tr
                             td
-                                .provides-guidance
+                                img(src='/assets/icons/ie/provides-guidance.jpg')
                             td
                                 include:marked ../../TM_Static/content/landing-pages/feature-4.md
 
@@ -108,7 +99,7 @@ mixin footer-div
             .col-6
                 ul.si
                     li
-                        img(src='/assets/logos/si-logo.png' width='15px' height='15px')
+                        img(src='/assets/logos/si-logo.jpg' width='15px' height='15px')
                     li
                         a(href='http://www.securityinnovation.com/', target='_blank') Security Innovation 2015. All rights reserved.
             .col-offset-2.col-4
@@ -116,7 +107,7 @@ mixin footer-div
                     li
                         .label TEAM Mentor 4.0
                     li
-                        a#tm-support-email(href='mailto:support@securityinnovation.com' title='Email')
+                        a#tm-support-email(href=supportEmail title='Email')
                             +mail-icon
                     li
                         a#tm-twitter(href='http://www.twitter.com/SecInnovation' target='_blank' title='Twitter')

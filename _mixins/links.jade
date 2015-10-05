@@ -11,32 +11,33 @@ include globals.jade
 mixin links-navbar__landing-page
 	ul
 		li
-			a#nav-about(href='/guest/about.html') About
+			a#nav-about(href='/jade/guest/about.html') About
 		li
-			a#nav-features(href='/guest/features.html') Features
+			a#nav-features(href='/jade/guest/features.html') Features
 		li
-			a#nav-help(href='/help/index.html') Docs
+			a#nav-help(href='/jade/help/index.html') Docs
 		li
-			a#nav-sign-up(href='/guest/sign-up.html') Sign Up
+			a#nav-sign-up(href='/jade/guest/sign-up.html') Sign Up
 		li
-			a#nav-login(href='/guest/login.html') Login
+			a#nav-login(href='/jade/guest/login.html') Login
 
 mixin links-navbar__home
 	ul
 		li
-			a#nav-user-main(href='/user/main.html')
-				+search-icon
-				span Search
+			a#nav-user-main(href='/jade/user/main.html')
+				span.icon
+					+search-icon
+				span.text Search
 		li
-			a#nav-user-guidance(href='/show/')
+			a#nav-user-guidance(href='/jade/show/')
 				+index-icon
 				span Index
 		li
-			a#nav-user-help(href='/help/index.html')
+			a#nav-user-help(href='/jade/help/index.html')
 				+info-icon
 				span Docs
 		li
-			a#nav-user-logout(href='/user/logout')
+			a#nav-user-logout(href='/jade/user/logout')
 				+logout-icon
 				span Logout
 

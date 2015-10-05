@@ -5,7 +5,7 @@ include ../_mixins/links.jade
         //Hides tm logo and shows navbar
         if(global.custom.custom_navigation.NoTm)
             #team-mentor-navigation(class=global.custom.custom_navigation.navbarclass)
-                a(href='/user/main.html')
+                a(href='/jade/show')
                     #tm-logo(class=global.custom.custom_navigation.logoclass)
                         img(src=global.custom.custom_navigation.logo)
 
@@ -18,12 +18,12 @@ include ../_mixins/links.jade
                             +mail-icon
                             span Found an issue? Send us
                                 =  ' '
-                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                a#tm-support-email(href=supportEmail) an email
                                 =  '.'
 
         else
             #team-mentor-navigation
-                a(href='/user/main.html')
+                a(href='/jade/show')
                     #tm-logo(class="customization")
                 #customer-logo
                     img(src=global.custom.custom_navigation.logo)
@@ -34,18 +34,24 @@ include ../_mixins/links.jade
                             +mail-icon
                             span Found an issue? Send us
                                 =  ' '
-                                a#tm-support-email(href="mailto:support@securityinnovation.com") an email
+                                a#tm-support-email(href=supportEmail) an email
                                 =  '.'
     else
         #team-mentor-navigation
-            a(href='/user/main.html')
+            a(href='/jade/show')
                 #tm-logo
             #links
                 +links-navbar__home
                 ul#message
                     li
                         +mail-icon
-                        span Found an issue? Send us
-                            =  ' '
-                            a#tm-support-email(href="mailto:support@securityinnovation.com") an email
-                            =  '.'
+                        if internalUser
+                            span Found an issue? Open it
+                                =  ' '
+                                a#tm-support-link(href=githubUrl target="_blank") here
+                                =  '.'
+                        else
+                            span Found an issue? Send us
+                                =  ' '
+                                a#tm-support-email(href=supportEmail) an email
+                                =  '.'

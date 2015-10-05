@@ -27,23 +27,27 @@ mixin search-bar-input
             .row
                 .col-offset-2.col-8
                     #search-input
-                        form(action='/search', method='GET')
+                        form(action='/jade/search', method='GET')
                             label(for='search-input') Search...
                             .input-group
                                 input.form-control(type='text', id='search-input', name='text')
                                 button#search-button(type='submit')
-                                    +search-icon
+                                    span.icon
+                                        +search-icon
+                                    span.text Search
 
 mixin search-2
     #search-div-2
         .lge-container
             #search-input
-                form(action='/search', method='GET')
+                form(action='/jade/search', method='GET')
                     label(for='search-input') Search...
                     .input-group
                         input.form-control(type='text', name='text', value= text)
                         button#search-button(type='submit')
-                            +search-icon
+                            span.icon
+                                +search-icon
+                            span.text Search
 
 //- results
 mixin results
@@ -106,7 +110,7 @@ mixin main-app-view
                         for recent_Article in recent_Articles
                           tr
                             td
-                                a(href='/article/' + recent_Article.id.remove('article-') + '/' + recent_Article.title.replace(/ /g,'-').remove('.'), id=recent_Article.id)
+                                a(href='/jade/article/' + recent_Article.id.remove('article-') + '/' + recent_Article.title.replace(/ /g,'-').remove('.'), id=recent_Article.id)
                                     = recent_Article.title
         if (top_Searches)
             .bg
@@ -116,7 +120,7 @@ mixin main-app-view
                         for top_Search in top_Searches
                             tr
                                 td
-                                    a(href='/search?text=' + top_Search.title.str().url_Encode())
+                                    a(href='/jade/search?text=' + top_Search.title.str().url_Encode())
                                         = top_Search.title
             .bg
                 #top-articles
@@ -126,7 +130,7 @@ mixin main-app-view
                             tr
                                 td
                                     //a(href=top_Article.href)
-                                    a(href= top_Article.href.remove('article-') + '/' + top_Article.title.replace(/ /g,'-').remove('.'), id=top_Article.id)
+                                    a(href= '/jade' + top_Article.href.remove('article-') + '/' + top_Article.title.replace(/ /g,'-').remove('.'), id=top_Article.id)
                                         = top_Article.title
         //if (newArticles)
             .bg
@@ -150,7 +154,7 @@ mixin articles-list
                                 td.filter-icons
                                     span.label= '#' + (index +1)
                                 td
-                                    a(href='/article/' + result.id.remove('article-') + '/' + result.title.replace(/ /g,'-').remove('.'), id=result.id)
+                                    a(href='/jade/article/' + result.id.remove('article-') + '/' + result.title.replace(/ /g,'-').remove('.'), id=result.id)
                                         h4= result.title
                             tr
                                 td.filter-icons
