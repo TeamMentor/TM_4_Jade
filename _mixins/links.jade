@@ -36,10 +36,11 @@ mixin links-navbar__home
 			a#nav-user-help(href='/jade/help/index.html')
 				+info-icon
 				span Docs
-		li
-			a#nav-user-logout(href='/jade/user/logout')
-				+logout-icon
-				span Logout
+		if !hideLogout
+			li
+				a#nav-user-logout(href='/jade/user/logout')
+					+logout-icon
+					span Logout
 
 mixin terms-and-conditions-links
 	.bg#help-nav
