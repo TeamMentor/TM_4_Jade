@@ -96,6 +96,22 @@ mixin java-icon
     span.path1
     span.path2
 
+mixin icon-Python
+  span.icon-Python(title='Python')
+    span.path1
+    span.path2
+
+mixin icon-Ruby
+  span.icon-Ruby(title='Ruby')
+    span.path1
+    span.path2
+
+mixin icon-ABAP
+  span.icon-ABAP(title='ABAP')
+    span.path1
+    span.path2
+    span.path3
+
 mixin all-icon
   span.icon-All(title='Technology Independent')
     span.path1
@@ -113,6 +129,13 @@ mixin c-icon
   span.icon-C(title='C++')
     span.path1
     span.path2
+
+mixin icon-AWS
+  span.icon-AWS(title='AWS')
+    span.path1
+    span.path2
+    span.path3
+    span.path4
 
 mixin checklist-icon
   span.icon-Checklist(title='Checklist')
@@ -233,6 +256,14 @@ mixin filter-icon(filter, title)
             +web-app-icon
           when 'HTML5'
             +html5-icon
+          when 'ABAP'
+            +icon-ABAP
+          when 'Python'
+            +icon-Python
+          when 'Ruby'
+            +icon-Ruby
+          when 'AWS'
+            +icon-AWS
           default
             +default-icon
 
